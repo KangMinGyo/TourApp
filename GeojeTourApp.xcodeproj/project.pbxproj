@@ -9,16 +9,21 @@
 /* Begin PBXBuildFile section */
 		8CC6F74D29A33CDE009569AF /* GeojeTourAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CC6F74C29A33CDE009569AF /* GeojeTourAppApp.swift */; };
 		8CC6F74F29A33CDE009569AF /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CC6F74E29A33CDE009569AF /* ContentView.swift */; };
-		8CC6F75129A33CE0009569AF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8CC6F75029A33CE0009569AF /* Assets.xcassets */; };
 		8CC6F75429A33CE0009569AF /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8CC6F75329A33CE0009569AF /* Preview Assets.xcassets */; };
+		8CC6F75B29A3420A009569AF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8CC6F75A29A3420A009569AF /* Assets.xcassets */; };
+		8CC6F76029A3436B009569AF /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CC6F75F29A3436B009569AF /* Location.swift */; };
+		8CC6F76329A34739009569AF /* LocationsDataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CC6F76229A34739009569AF /* LocationsDataService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		8CC6F74929A33CDE009569AF /* GeojeTourApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GeojeTourApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8CC6F74C29A33CDE009569AF /* GeojeTourAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeojeTourAppApp.swift; sourceTree = "<group>"; };
 		8CC6F74E29A33CDE009569AF /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
-		8CC6F75029A33CE0009569AF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8CC6F75329A33CE0009569AF /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		8CC6F75A29A3420A009569AF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		8CC6F75F29A3436B009569AF /* Location.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
+		8CC6F76229A34739009569AF /* LocationsDataService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationsDataService.swift; sourceTree = "<group>"; };
+		8CC6F76429A34F83009569AF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,9 +56,14 @@
 		8CC6F74B29A33CDE009569AF /* GeojeTourApp */ = {
 			isa = PBXGroup;
 			children = (
+				8CC6F76429A34F83009569AF /* Info.plist */,
 				8CC6F74C29A33CDE009569AF /* GeojeTourAppApp.swift */,
 				8CC6F74E29A33CDE009569AF /* ContentView.swift */,
-				8CC6F75029A33CE0009569AF /* Assets.xcassets */,
+				8CC6F76129A34707009569AF /* DataServices */,
+				8CC6F75D29A342A6009569AF /* Views */,
+				8CC6F75E29A342AE009569AF /* ViewModels */,
+				8CC6F75C29A34292009569AF /* Models */,
+				8CC6F75A29A3420A009569AF /* Assets.xcassets */,
 				8CC6F75229A33CE0009569AF /* Preview Content */,
 			);
 			path = GeojeTourApp;
@@ -65,6 +75,36 @@
 				8CC6F75329A33CE0009569AF /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		8CC6F75C29A34292009569AF /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				8CC6F75F29A3436B009569AF /* Location.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		8CC6F75D29A342A6009569AF /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		8CC6F75E29A342AE009569AF /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		8CC6F76129A34707009569AF /* DataServices */ = {
+			isa = PBXGroup;
+			children = (
+				8CC6F76229A34739009569AF /* LocationsDataService.swift */,
+			);
+			path = DataServices;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -125,8 +165,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8CC6F75B29A3420A009569AF /* Assets.xcassets in Resources */,
 				8CC6F75429A33CE0009569AF /* Preview Assets.xcassets in Resources */,
-				8CC6F75129A33CE0009569AF /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -137,7 +177,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8CC6F76329A34739009569AF /* LocationsDataService.swift in Sources */,
 				8CC6F74F29A33CDE009569AF /* ContentView.swift in Sources */,
+				8CC6F76029A3436B009569AF /* Location.swift in Sources */,
 				8CC6F74D29A33CDE009569AF /* GeojeTourAppApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -270,11 +312,12 @@
 				DEVELOPMENT_TEAM = AH24YSXN5M;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_FILE = GeojeTourApp/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -299,11 +342,12 @@
 				DEVELOPMENT_TEAM = AH24YSXN5M;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_FILE = GeojeTourApp/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
