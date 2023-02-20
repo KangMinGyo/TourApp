@@ -13,6 +13,8 @@
 		8CC6F75B29A3420A009569AF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8CC6F75A29A3420A009569AF /* Assets.xcassets */; };
 		8CC6F76029A3436B009569AF /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CC6F75F29A3436B009569AF /* Location.swift */; };
 		8CC6F76329A34739009569AF /* LocationsDataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CC6F76229A34739009569AF /* LocationsDataService.swift */; };
+		8CC6F76629A3505C009569AF /* LocationsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CC6F76529A3505C009569AF /* LocationsView.swift */; };
+		8CC6F76829A35602009569AF /* LocationsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CC6F76729A35602009569AF /* LocationsViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +26,8 @@
 		8CC6F75F29A3436B009569AF /* Location.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
 		8CC6F76229A34739009569AF /* LocationsDataService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationsDataService.swift; sourceTree = "<group>"; };
 		8CC6F76429A34F83009569AF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		8CC6F76529A3505C009569AF /* LocationsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationsView.swift; sourceTree = "<group>"; };
+		8CC6F76729A35602009569AF /* LocationsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationsViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -88,6 +92,7 @@
 		8CC6F75D29A342A6009569AF /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				8CC6F76529A3505C009569AF /* LocationsView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -95,6 +100,7 @@
 		8CC6F75E29A342AE009569AF /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
+				8CC6F76729A35602009569AF /* LocationsViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -178,7 +184,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				8CC6F76329A34739009569AF /* LocationsDataService.swift in Sources */,
+				8CC6F76829A35602009569AF /* LocationsViewModel.swift in Sources */,
 				8CC6F74F29A33CDE009569AF /* ContentView.swift in Sources */,
+				8CC6F76629A3505C009569AF /* LocationsView.swift in Sources */,
 				8CC6F76029A3436B009569AF /* Location.swift in Sources */,
 				8CC6F74D29A33CDE009569AF /* GeojeTourAppApp.swift in Sources */,
 			);
