@@ -22,6 +22,14 @@ struct LocationsView: View {
                     .padding()
                 
                 Spacer()
+                
+                ZStack {
+                    ForEach(viewModel.locations) { location in
+                        LocationPreviewView(location: location)
+                            .shadow(color: .black.opacity(0.3), radius: 20)
+                            .padding()
+                    }
+                }
             }
         }
     }
