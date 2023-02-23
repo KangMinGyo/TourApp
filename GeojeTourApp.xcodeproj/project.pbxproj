@@ -18,6 +18,7 @@
 		8CC6F76A29A3954F009569AF /* LocationsListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CC6F76929A3954F009569AF /* LocationsListView.swift */; };
 		8CC6F76C29A64BAF009569AF /* LocationPreviewView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CC6F76B29A64BAF009569AF /* LocationPreviewView.swift */; };
 		8CC6F77029A7461F009569AF /* LocationMapAnnotationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CC6F76F29A7461F009569AF /* LocationMapAnnotationView.swift */; };
+		8CC6F77229A74F6D009569AF /* LocationDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CC6F77129A74F6D009569AF /* LocationDetailView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +35,7 @@
 		8CC6F76929A3954F009569AF /* LocationsListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationsListView.swift; sourceTree = "<group>"; };
 		8CC6F76B29A64BAF009569AF /* LocationPreviewView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationPreviewView.swift; sourceTree = "<group>"; };
 		8CC6F76F29A7461F009569AF /* LocationMapAnnotationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationMapAnnotationView.swift; sourceTree = "<group>"; };
+		8CC6F77129A74F6D009569AF /* LocationDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationDetailView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,6 +104,7 @@
 				8CC6F76929A3954F009569AF /* LocationsListView.swift */,
 				8CC6F76B29A64BAF009569AF /* LocationPreviewView.swift */,
 				8CC6F76F29A7461F009569AF /* LocationMapAnnotationView.swift */,
+				8CC6F77129A74F6D009569AF /* LocationDetailView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -200,6 +203,7 @@
 				8CC6F74F29A33CDE009569AF /* ContentView.swift in Sources */,
 				8CC6F76629A3505C009569AF /* LocationsView.swift in Sources */,
 				8CC6F76029A3436B009569AF /* Location.swift in Sources */,
+				8CC6F77229A74F6D009569AF /* LocationDetailView.swift in Sources */,
 				8CC6F74D29A33CDE009569AF /* GeojeTourAppApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

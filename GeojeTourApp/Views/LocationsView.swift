@@ -19,10 +19,13 @@ struct LocationsView: View {
             
             VStack(spacing: 0) {
                 header
-                    .padding()
+                    .padding() 
                 Spacer()
                 locationsPreviewStack
             }
+        }
+        .sheet(item: $viewModel.sheetLocation, onDismiss: nil) { location in
+            LocationDetailView(location: location)
         }
     }
 }
