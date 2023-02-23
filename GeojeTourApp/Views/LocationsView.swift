@@ -14,34 +14,14 @@ struct LocationsView: View {
     
     var body: some View {
         ZStack {
-            Map(coordinateRegion: $viewModel.mapRegion,
-                annotationItems: viewModel.locations,
-                annotationContent: { location in
-                MapAnnotation(coordinate: location.coordinates) {
-                    Text("Hi")
-                }
-//                MapMarker(coordinate: location.coordinates, tint: .blue)
-            })
+            mapLayer
                 .ignoresSafeArea()
             
             VStack(spacing: 0) {
                 header
                     .padding()
-                
                 Spacer()
-                
-                ZStack {
-                    ForEach(viewModel.locations) { location in
-                        if viewModel.mapLocation == location {
-                            LocationPreviewView(location: location)
-                                .shadow(color: .black.opacity(0.3), radius: 20)
-                                .padding()
-                                .transition(.asymmetric(
-                                    insertion: .move(edge: .trailing),
-                                    removal: .move(edge: .leading))) // blog
-                        }
-                    }
-                }
+                locationsPreviewStack
             }
         }
     }
@@ -81,5 +61,36 @@ extension LocationsView {
         .background(.thickMaterial)
         .cornerRadius(10)
         .shadow(color: Color.black.opacity(0.3), radius: 20, x: 0, y: 15)
+    }
+    
+    private var mapLayer: some View {
+        Map(coordinateRegion: $viewModel.mapRegion,
+            annotationItems: viewModel.locations,
+            annotationContent: { location in
+            MapAnnotation(coordinate: location.coordinates) {
+                LocationMapAnnotationView()
+                    .scaleEffect(viewModel.mapLocation == location ? 1 : 0.7)
+                    .shadow(radius: 10)
+                    .onTapGesture {
+                        viewModel.showNextLocation(location: location)
+                    }
+            }
+//                MapMarker(coordinate: location.coordinates, tint: .blue)
+        })
+    }
+    
+    private var locationsPreviewStack: some View {
+        ZStack {
+            ForEach(viewModel.locations) { location in
+                if viewModel.mapLocation == location {
+                    LocationPreviewView(location: location)
+                        .shadow(color: .black.opacity(0.3), radius: 20)
+                        .padding()
+                        .transition(.asymmetric(
+                            insertion: .move(edge: .trailing),
+                            removal: .move(edge: .leading))) // blog
+                }
+            }
+        }
     }
 }
