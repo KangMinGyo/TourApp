@@ -9,12 +9,12 @@ import SwiftUI
 
 struct LocationPreviewView: View {
     
+    @EnvironmentObject private var viewModel: LocationsViewModel
     let location: Location
     
     var body: some View {
         HStack(alignment: .bottom, spacing: 0) {
             VStack(alignment: .leading, spacing: 16.0) {
-                //사진의 크기가 큰데 조절하는 방법은?
                 imageSection
                 titleSection
             }
@@ -42,6 +42,7 @@ struct LocationPreviewView_Previews: PreviewProvider {
             LocationPreviewView(location: LocationsDataService.locations.first!)
                 .padding()
         }
+        .environmentObject(LocationsViewModel())
     }
 }
 
@@ -51,6 +52,7 @@ extension LocationPreviewView {
         ZStack {
             if let imageName = location.imageNames.first {
                 Image(imageName)
+                    //사진의 크기가 큰데 조절하는 방법은?
                     .resizable()
                     .scaledToFill()
                     .frame(width: 100, height: 100)
@@ -87,7 +89,7 @@ extension LocationPreviewView {
     
     private var nextButton: some View {
         Button {
-            
+            viewModel.nextButtonPressed()
         } label: {
             Text("Next")
                 .font(.headline)

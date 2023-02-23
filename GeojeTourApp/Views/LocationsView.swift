@@ -25,9 +25,14 @@ struct LocationsView: View {
                 
                 ZStack {
                     ForEach(viewModel.locations) { location in
-                        LocationPreviewView(location: location)
-                            .shadow(color: .black.opacity(0.3), radius: 20)
-                            .padding()
+                        if viewModel.mapLocation == location {
+                            LocationPreviewView(location: location)
+                                .shadow(color: .black.opacity(0.3), radius: 20)
+                                .padding()
+                                .transition(.asymmetric(
+                                    insertion: .move(edge: .trailing),
+                                    removal: .move(edge: .leading))) // blog
+                        }
                     }
                 }
             }
