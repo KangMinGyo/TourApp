@@ -21,7 +21,7 @@ struct LocationDetailView: View {
                 
                 VStack(alignment: .leading, spacing: 16) {
                     titleSection
-                    Divider() // 구분선
+                    Divider()
                     descriptionSection
                     Divider()
                     mapLayer
@@ -88,7 +88,7 @@ extension LocationDetailView {
                     .shadow(radius: 10)
             }
         }
-            .allowsHitTesting(false) // 지도 안 움직임
+            .allowsHitTesting(false) // 지도 안 움직이게
             .aspectRatio(1, contentMode: .fit) // ?
             .cornerRadius(30)
     }

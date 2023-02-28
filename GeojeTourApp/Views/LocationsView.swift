@@ -78,7 +78,6 @@ extension LocationsView {
                         viewModel.showNextLocation(location: location)
                     }
             }
-//                MapMarker(coordinate: location.coordinates, tint: .blue)
         })
     }
     

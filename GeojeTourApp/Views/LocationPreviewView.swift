@@ -30,8 +30,7 @@ struct LocationPreviewView: View {
                 .fill(.ultraThinMaterial)
                 .offset(y: 65)
         )
-        .cornerRadius(10) // 이거하면 자동으로 clipped가 되는건가?
-//        .clipped() // blog
+        .cornerRadius(10)
     }
 }
 
